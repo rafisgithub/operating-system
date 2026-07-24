@@ -53,7 +53,13 @@ int main() {
         }
     }
     
-    cout << "Average Turnaround Time: " << totalTAT / n << endl;
-    cout << "Average Waiting Time: " << totalWT / n << endl;
+    // Output the results
+    cout << "Process\tAT\tBT\tPR\tCT\tTAT\tWT\n";
+    for(int i = 0; i < n; i++) {
+        cout << "P" << i+1 << "\t" << AT[i] << "\t" << BT[i] << "\t" << PR[i] << "\t" << CT[i] << "\t" << TAT[i] << "\t" << WT[i] << endl;
+    }
+
+    cout << "Average Turnaround Time: " << totalTAT/n << endl;
+    cout << "Average Waiting Time: " << totalWT/n << endl;
 
 }
